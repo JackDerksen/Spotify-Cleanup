@@ -1,7 +1,7 @@
 # Spotify Library Cleanup Tool
 A useful little Python script which uses Spotify's web API to clean your library.
 
-**CAUTION: THE EFFECTS OF USING THIS PROGRAM ARE IRREVERSIBLE. I'M NOT RESPONSIBLE IF YOU DELETE YOUR WHOLE LIBRARY BY ACCIDENT. USE AT YOUR OWN RISK.** Please read and understand all the instructions in the README prior to use.
+**CAUTION: THE EFFECTS OF USING THIS PROGRAM ARE PERMANENT AND IRREVERSIBLE AS FAR AS I KNOW. I'M NOT RESPONSIBLE IF YOU DELETE YOUR WHOLE LIBRARY BY ACCIDENT. USE AT YOUR OWN RISK.** Please read and understand all the instructions in the README prior to use.
 
 This tool can help you remove:
 - Saved albums

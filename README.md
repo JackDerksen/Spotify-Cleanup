@@ -8,10 +8,10 @@ A useful little Python script which uses Spotify's web API to mass delete all sa
 
 2. Set up a Spotify Developer account:
 
-  Go to the [Spotify developer dashboard](https://developer.spotify.com/dashboard) and sign in
-  Create a new application, fill out the required details
-  Get your Client ID and Client Secret
-  Add `http://localhost:8888/callback` to your application's Redirect URIs
+  - Go to the [Spotify developer dashboard](https://developer.spotify.com/dashboard) and sign in
+  - Create a new application, fill out the required details
+  - Get your Client ID and Client Secret
+  - Add `http://localhost:8888/callback` to your application's Redirect URIs
 
 3. Replace YOUR_CLIENT_ID and YOUR_CLIENT_SECRET in the script with your actual credentials
 

@@ -11,8 +11,8 @@ def setup_spotify_client():
     return spotipy.Spotify(auth_manager=SpotifyOAuth(
         scope=scope,
         redirect_uri='http://localhost:8888/callback',
-        client_id='INSERT YOUR CLIENT ID HERE',
-        client_secret='INSERT YOUR CLIENT SECRET HERE'
+        client_id='YOUR_CLIENT_ID',
+        client_secret='YOUR_CLIENT_SECRET'
     ))
 
 def get_all_saved_albums(sp):

@@ -1,26 +1,110 @@
-# Spotify-Mass-Delete
+# Spotify Library Cleanup Tool
 A useful little Python script which uses Spotify's web API to mass delete **all** saved albums from your library.
+**CAUTION: THE EFFECTS OF USING THIS PROGRAM ARE IRREVERSIBLE. I'M NOT RESPONSIBLE IF YOU DELETE YOUR WHOLE LIBRARY BY ACCIDENT. USE AT YOUR OWN RISK.**
 
-## Usage Instructions
+This tool can help you remove:
+- Saved albums
+- Playlists you own
+- Liked songs
+- All of the above at once
 
-1. Install Python, if you haven't already.
-2. Install the required Python package:
-`pip install spotipy`
+## Prerequisites
 
-3. Set up a Spotify Developer account:
-  - Go to the [Spotify developer dashboard](https://developer.spotify.com/dashboard) and sign in
-  - Create a new application, fill out the required details
-  - Get your Client ID and Client Secret
-  - Add `http://localhost:8888/callback` to your application's Redirect URIs
+- Python 3.6 or higher
+- A Spotify account
+- Spotify Developer credentials
 
-4. Replace the "client ID" and "client secret" strings near the top of the script with your actual credentials from the previous step
+## Installation
 
-These credentials are specifically for your app to communicate with Spotify's API. The script will still prompt you to log in with your regular Spotify account when you run it, but it needs these developer credentials to access the API.
+1. Clone this repository or download the script file (main.py).
+2. Install the required package using pip:
+```bash
+pip install spotipy
+```
 
-When you run the script, it will:
-- Authenticate with Spotify (opening a browser window for authorization)
-- Fetch all your saved albums
-- Ask for confirmation before proceeding
-- Remove the albums in batches, respecting Spotify's API rate limits
+## Setting Up Spotify Developer Credentials
 
-The script includes error handling and rate limiting to ensure reliable operation.
+1. Visit the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+2. Log in with your Spotify account
+3. Click "Create App"
+4. Fill out the application details:
+   - App name: Choose any name (e.g., "Library Cleanup Tool")
+   - App description: Optional
+   - Redirect URI: Set this to `http://localhost:8888/callback`
+5. Accept the terms of service
+6. After creation, you'll see your Client ID
+7. Click "View Client Secret" to reveal your Client Secret
+8. Open the script in a text editor and replace:
+   - `YOUR_CLIENT_ID` with your actual Client ID
+   - `YOUR_CLIENT_SECRET` with your actual Client Secret
+
+## Usage
+
+1. Run the script:
+```bash
+python3 spotify_cleanup.py
+```
+
+2. On first run, your browser will open asking you to log in to Spotify and authorize the application.
+
+3. Once authorized, you'll see the main menu with these options:
+```
+Spotify Library Cleanup Tool
+1. Remove all saved albums
+2. Remove all owned playlists
+3. Remove all liked songs
+4. Remove everything
+5. Exit
+```
+
+4. Choose an option by entering the corresponding number (1-5)
+
+5. For each action:
+   - The script will first count the items to be removed
+   - You'll be asked to confirm before deletion begins
+   - Type 'yes' to proceed or 'no' to cancel
+   - Progress will be displayed as items are removed
+
+## Important Notes
+
+- This tool only removes playlists that you own, not playlists you follow
+- Deletions are permanent and cannot be undone
+- The script includes rate limiting to comply with Spotify's API guidelines
+- You can safely cancel the script at any time by pressing Ctrl+C
+
+## Troubleshooting
+
+### Common Issues:
+
+1. **Invalid Client Credentials:**
+   - Double-check that you've correctly copied your Client ID and Client Secret
+   - Ensure there are no extra spaces in the credentials
+
+2. **Authorization Failed:**
+   - Make sure the redirect URI in your Spotify Developer Dashboard matches exactly: `http://localhost:8888/callback`
+   - Try clearing your browser cookies and cache
+
+3. **Rate Limiting:**
+   - The script includes built-in rate limiting
+   - If you still encounter rate limit errors, wait a few minutes before trying again
+
+### Error Messages:
+
+- `Invalid Client Secret`: Check your developer dashboard for the correct secret
+- `Invalid Redirect URI`: Verify the URI in your dashboard settings
+- `Access Denied`: Re-authorize the application in your browser
+
+## Safety Features
+
+- Confirmation prompts before any deletion
+- Rate limiting to prevent API abuse
+- Error handling for failed operations
+- Progress tracking during deletion
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is licensed under the MIT License - feel free to use it however you'd like.

@@ -1,7 +1,7 @@
 # Spotify Library Cleanup Tool
 A useful little Python script which uses Spotify's web API to mass delete **all** saved albums from your library.
 
-**CAUTION: THE EFFECTS OF USING THIS PROGRAM ARE IRREVERSIBLE. I'M NOT RESPONSIBLE IF YOU DELETE YOUR WHOLE LIBRARY BY ACCIDENT. USE AT YOUR OWN RISK.**
+**CAUTION: THE EFFECTS OF USING THIS PROGRAM ARE IRREVERSIBLE. I'M NOT RESPONSIBLE IF YOU DELETE YOUR WHOLE LIBRARY BY ACCIDENT. USE AT YOUR OWN RISK.** Please read and understand all the instructions in the README prior to use.
 
 This tool can help you remove:
 - Saved albums
@@ -61,8 +61,8 @@ Spotify Library Cleanup Tool
 4. Choose an option by entering the corresponding number (1-5)
 
 5. For each action:
-   - The script will first count the items to be removed
-   - You'll be asked to confirm before deletion begins
+   - The script will first tell you how many items will be removed by your selected action
+   - **You'll be asked to confirm before deletion begins**
    - Type 'yes' to proceed or 'no' to cancel
    - Progress will be displayed as items are removed
 

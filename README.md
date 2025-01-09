@@ -36,8 +36,8 @@ pip install spotipy
 6. After creation, you'll see your Client ID
 7. Click "View Client Secret" to reveal your Client Secret
 8. Open the script in a text editor and replace:
-   - `YOUR_CLIENT_ID` with your actual Client ID
-   - `YOUR_CLIENT_SECRET` with your actual Client Secret
+   - `YOUR_CLIENT_ID_HERE!` string with your actual Client ID
+   - `YOUR_CLIENT_SECRET_HERE!` string with your actual Client Secret
 
 ## Usage
 
